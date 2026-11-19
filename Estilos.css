@@ -1,0 +1,244 @@
+/* MIS FUENTES  */
+
+
+
+/*CARGAMOS PROPIAS FUENTES*/@font-face {
+    font-family: 'Newsreader';
+    src: url('../Fuentes/Newsreader-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Newsreader';
+    src: url('../Fuentes/Newsreader-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../Fuentes/PlusJakartaSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../Fuentes/PlusJakartaSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+
+:root {
+
+    /* FONDO */
+    --color-background: #141312;
+    --color-surface: #1D1B1A;
+
+    /* Dorado */
+    --color-primary: #D4A359;
+
+    /* Texto */
+    --color-text: #F5F2EB;
+    --color-text-menu: #A8A196;
+
+    /* Bordes */
+    --color-border: #262422;
+    --color-border-bronze: #38332B;
+
+    /* Tipografías */
+    --font-heading: 'Newsreader', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+
+    /* Tamaño */
+    --text-small: 8px;
+}
+
+
+
+
+
+
+/* ESTILOS GENREALES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+
+/* =========================================
+   3. ENCABEZADO
+========================================= */
+
+.Encabezado {
+    min-height: 62px;
+    padding: 0 4.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+}
+
+
+/* =========================================
+   4. LOGO
+========================================= */
+
+.Logo {
+    display: flex;
+    flex-direction: column;
+
+    text-decoration: none;
+    line-height: 1;
+}
+
+.LogoNombre {
+    font-family: var(--font-heading);
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.LogoSubtitulo {
+    margin-top: 5px;
+
+    font-family: var(--font-body);
+    font-size: 6px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+
+    color: var(--color-primary);
+}
+
+
+/* =========================================
+   5. MENÚ
+========================================= */
+
+.Navegacion {
+    display: flex;
+    align-items: center;
+}
+
+.Menu { 
+    display: flex;
+    align-items: center;
+    gap: 27px;
+
+    list-style: none;
+}
+
+.Menu a {
+    text-decoration: none;
+
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    font-weight: 400;
+
+    color: var(--color-text-menu);
+
+    transition: color 0.3s;
+}
+
+.Menu a:hover {
+    color: var(--color-primary);
+}
+
+.Menu .Activo {
+    color: var(--color-primary);
+}
+
+
+/* =========================================
+   6. BOTONES
+========================================= */
+
+.Acciones {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+/* Los dos botones comparten el mismo estilo (separados por coma) */
+.BotonFavoritos,
+.BotonCarrito {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-bronze);
+    border-radius: 50%;
+
+    color: var(--color-primary);
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.BotonFavoritos:hover,
+.BotonCarrito:hover {
+    border-color: var(--color-primary);
+}
+
+
+/* =========================================
+   7. DISEÑO RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .Encabezado {
+        padding: 0 3%;
+    }
+
+    .Menu {
+        gap: 12px;
+    }
+
+    .Menu a {
+        font-size: 7px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .Encabezado {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 12px 5%;
+    }
+
+    .Navegacion {
+        width: 100%;
+        overflow-x: auto;
+        order: 3;
+    }
+
+    .Menu {
+        width: max-content;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .Menu a {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .Acciones {
+        margin-left: auto;
+    }
+}

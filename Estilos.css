@@ -1,8 +1,4 @@
 
-/* =========================================
-   1. FUENTES
-========================================= */
-
 @font-face {
     font-family: 'Newsreader';
     src: url('../Fuentes/Newsreader-Regular.ttf') format('truetype');
@@ -28,9 +24,7 @@
 }
 
 
-/* =========================================
-   2. VARIABLES GLOBALES
-========================================= */
+
 
 :root {
 
@@ -58,9 +52,7 @@
 }
 
 
-/* =========================================
-   3. ESTILOS GENERALES
-========================================= */
+
 
 * {
     margin: 0;
@@ -75,9 +67,9 @@ body {
 }
 
 
-/* =========================================
-   4. BLOQUE: ENCABEZADO
-========================================= */
+
+
+
 
 .encabezado {
     min-height: 62px;
@@ -92,9 +84,8 @@ body {
 }
 
 
-/* =========================================
-   5. BLOQUE: LOGO
-========================================= */
+
+
 
 .logo {
     display: flex;
@@ -123,9 +114,7 @@ body {
 }
 
 
-/* =========================================
-   6. BLOQUE: NAVEGACIÓN
-========================================= */
+
 
 .navegacion {
     display: flex;
@@ -156,16 +145,14 @@ body {
     color: var(--color-primary);
 }
 
-/* MODIFICADOR: Enlace activo */
 
 .navegacion__enlace--activo {
     color: var(--color-primary);
 }
 
 
-/* =========================================
-   7. BLOQUE: ACCIONES
-========================================= */
+
+
 
 .acciones {
     display: flex;
@@ -173,7 +160,9 @@ body {
     gap: 7px;
 }
 
-/* ELEMENTO: Botón */
+
+
+
 
 .acciones__boton {
     width: 29px;
@@ -193,70 +182,19 @@ body {
     cursor: pointer;
 }
 
-/* MODIFICADORES: Tipos de botón */
+
 
 .acciones__boton--favoritos {
-    /* Botón de favoritos */
 }
 
 .acciones__boton--carrito {
-    /* Botón del carrito */
 }
 
-/* Estado hover */
+
 
 .acciones__boton:hover {
     border-color: var(--color-primary);
 }
 
 
-/* =========================================
-   8. DISEÑO RESPONSIVE
-========================================= */
 
-@media (max-width: 900px) {
-
-    .encabezado {
-        padding: 0 3%;
-    }
-
-    .navegacion__menu {
-        gap: 12px;
-    }
-
-    .navegacion__enlace {
-        font-size: 7px;
-    }
-}
-
-
-@media (max-width: 650px) {
-
-    .encabezado {
-        flex-wrap: wrap;
-        gap: 15px;
-        padding: 12px 5%;
-    }
-
-    .navegacion {
-        width: 100%;
-        overflow-x: auto;
-        order: 3;
-    }
-
-    .navegacion__menu {
-        width: max-content;
-        gap: 20px;
-        padding-bottom: 10px;
-    }
-
-    .navegacion__enlace {
-        font-size: 10px;
-        white-space: nowrap;
-    }
-
-    .acciones {
-        margin-left: auto;
-    }
-
-}

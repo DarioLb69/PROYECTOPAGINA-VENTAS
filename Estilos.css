@@ -28,26 +28,27 @@
 
 :root {
 
-    /* Fondo */
     --color-background: #141312;
     --color-surface: #1D1B1A;
 
-    /* Dorado */
+
     --color-primary: #D4A359;
 
-    /* Texto */
+
     --color-text: #F5F2EB;
     --color-text-menu: #A8A196;
 
-    /* Bordes */
+
     --color-border: #262422;
     --color-border-bronze: #38332B;
 
-    /* Tipografías */
+
+
     --font-heading: 'Newsreader', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
 
-    /* Tamaño */
+
+
     --text-small: 8px;
 }
 

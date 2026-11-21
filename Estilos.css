@@ -1,8 +1,9 @@
-/* MIS FUENTES  */
 
+/* =========================================
+   1. FUENTES
+========================================= */
 
-
-/*CARGAMOS PROPIAS FUENTES*/@font-face {
+@font-face {
     font-family: 'Newsreader';
     src: url('../Fuentes/Newsreader-Regular.ttf') format('truetype');
     font-weight: 400;
@@ -27,9 +28,13 @@
 }
 
 
+/* =========================================
+   2. VARIABLES GLOBALES
+========================================= */
+
 :root {
 
-    /* FONDO */
+    /* Fondo */
     --color-background: #141312;
     --color-surface: #1D1B1A;
 
@@ -53,11 +58,9 @@
 }
 
 
-
-
-
-
-/* ESTILOS GENREALES */
+/* =========================================
+   3. ESTILOS GENERALES
+========================================= */
 
 * {
     margin: 0;
@@ -73,10 +76,10 @@ body {
 
 
 /* =========================================
-   3. ENCABEZADO
+   4. BLOQUE: ENCABEZADO
 ========================================= */
 
-.Encabezado {
+.encabezado {
     min-height: 62px;
     padding: 0 4.5%;
 
@@ -90,10 +93,10 @@ body {
 
 
 /* =========================================
-   4. LOGO
+   5. BLOQUE: LOGO
 ========================================= */
 
-.Logo {
+.logo {
     display: flex;
     flex-direction: column;
 
@@ -101,14 +104,14 @@ body {
     line-height: 1;
 }
 
-.LogoNombre {
+.logo__nombre {
     font-family: var(--font-heading);
     font-size: 25px;
     font-weight: 600;
     color: var(--color-text);
 }
 
-.LogoSubtitulo {
+.logo__subtitulo {
     margin-top: 5px;
 
     font-family: var(--font-body);
@@ -121,15 +124,15 @@ body {
 
 
 /* =========================================
-   5. MENÚ
+   6. BLOQUE: NAVEGACIÓN
 ========================================= */
 
-.Navegacion {
+.navegacion {
     display: flex;
     align-items: center;
 }
 
-.Menu { 
+.navegacion__menu {
     display: flex;
     align-items: center;
     gap: 27px;
@@ -137,7 +140,7 @@ body {
     list-style: none;
 }
 
-.Menu a {
+.navegacion__enlace {
     text-decoration: none;
 
     font-family: var(--font-body);
@@ -149,28 +152,30 @@ body {
     transition: color 0.3s;
 }
 
-.Menu a:hover {
+.navegacion__enlace:hover {
     color: var(--color-primary);
 }
 
-.Menu .Activo {
+/* MODIFICADOR: Enlace activo */
+
+.navegacion__enlace--activo {
     color: var(--color-primary);
 }
 
 
 /* =========================================
-   6. BOTONES
+   7. BLOQUE: ACCIONES
 ========================================= */
 
-.Acciones {
+.acciones {
     display: flex;
     align-items: center;
     gap: 7px;
 }
 
-/* Los dos botones comparten el mismo estilo (separados por coma) */
-.BotonFavoritos,
-.BotonCarrito {
+/* ELEMENTO: Botón */
+
+.acciones__boton {
     width: 29px;
     height: 29px;
 
@@ -188,57 +193,70 @@ body {
     cursor: pointer;
 }
 
-.BotonFavoritos:hover,
-.BotonCarrito:hover {
+/* MODIFICADORES: Tipos de botón */
+
+.acciones__boton--favoritos {
+    /* Botón de favoritos */
+}
+
+.acciones__boton--carrito {
+    /* Botón del carrito */
+}
+
+/* Estado hover */
+
+.acciones__boton:hover {
     border-color: var(--color-primary);
 }
 
 
 /* =========================================
-   7. DISEÑO RESPONSIVE
+   8. DISEÑO RESPONSIVE
 ========================================= */
 
 @media (max-width: 900px) {
 
-    .Encabezado {
+    .encabezado {
         padding: 0 3%;
     }
 
-    .Menu {
+    .navegacion__menu {
         gap: 12px;
     }
 
-    .Menu a {
+    .navegacion__enlace {
         font-size: 7px;
     }
 }
 
+
 @media (max-width: 650px) {
 
-    .Encabezado {
+    .encabezado {
         flex-wrap: wrap;
         gap: 15px;
         padding: 12px 5%;
     }
 
-    .Navegacion {
+    .navegacion {
         width: 100%;
         overflow-x: auto;
         order: 3;
     }
 
-    .Menu {
+    .navegacion__menu {
         width: max-content;
         gap: 20px;
         padding-bottom: 10px;
     }
 
-    .Menu a {
+    .navegacion__enlace {
         font-size: 10px;
         white-space: nowrap;
     }
 
-    .Acciones {
+    .acciones {
         margin-left: auto;
     }
+
 }

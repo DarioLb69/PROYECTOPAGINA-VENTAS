@@ -1,7 +1,5 @@
 
-/* ========================================
-   MAIN - CONTENIDO PRINCIPAL
-======================================== */
+
 
 .principal {
     width: 100%;
@@ -18,9 +16,7 @@
     color: #f5f1e9;
 }
 
-/* ========================================
-   PRESENTACION - COLUMNA IZQUIERDA
-======================================== */
+
 
 .presentacion {
     display: flex;
@@ -58,9 +54,7 @@
     margin-bottom: 28px;
 }
 
-/* ========================================
-   BOTONES DE PRESENTACION
-======================================== */
+
 
 .presentacion__acciones {
     display: flex;
@@ -106,9 +100,7 @@
     color: #171411;
 }
 
-/* ========================================
-   BENEFICIOS
-======================================== */
+
 
 .beneficios {
     display: grid;
@@ -149,9 +141,7 @@
     margin: 0;
 }
 
-/* ========================================
-   PRODUCTO - COLUMNA DERECHA
-======================================== */
+
 
 .producto {
     display: flex;
@@ -169,7 +159,6 @@
     border-radius: 0;
 }
 
-/* IMAGEN DEL PRODUCTO */
 
 .producto__imagen-contenedor {
     position: relative;
@@ -234,7 +223,6 @@
     cursor: pointer;
 }
 
-/* INFORMACION DEL PRODUCTO */
 
 .producto__informacion {
     width: 100%;
@@ -279,7 +267,6 @@
     color: #aaa39a;
 }
 
-/* BOTONES DEL PRODUCTO */
 
 .producto__acciones {
     display: flex;
@@ -335,9 +322,7 @@
     margin-top: 15px;
 }
 
-/* ========================================
-   RESPONSIVE - TABLETS
-======================================== */
+
 
 @media (max-width: 900px) {
 
@@ -361,9 +346,7 @@
 
 }
 
-/* ========================================
-   RESPONSIVE - CELULARES
-======================================== */
+
 
 @media (max-width: 600px) {
 

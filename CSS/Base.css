@@ -1,0 +1,68 @@
+
+/* =========================================
+   1. FUENTES
+========================================= */
+
+@font-face {
+    font-family: 'Newsreader';
+    src: url('../Fuentes/Newsreader-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Newsreader';
+    src: url('../Fuentes/Newsreader-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../Fuentes/PlusJakartaSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../Fuentes/PlusJakartaSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+}
+
+
+/* =========================================
+   2. VARIABLES GLOBALES
+========================================= */
+
+:root {
+    --color-background: #141312;
+    --color-surface: #1D1B1A;
+
+    --color-primary: #D4A359;
+
+    --color-text: #F5F2EB;
+    --color-text-menu: #A8A196;
+
+    --color-border: #262422;
+    --color-border-bronze: #38332B;
+
+    --font-heading: 'Newsreader', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+
+    --text-small: 8px;
+}
+
+
+/* =========================================
+   3. ESTILOS GENERALES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}

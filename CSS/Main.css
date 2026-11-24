@@ -1,0 +1,392 @@
+
+/* ========================================
+   MAIN - CONTENIDO PRINCIPAL
+======================================== */
+
+.principal {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    padding: 50px 4%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 55px;
+
+    background-color: #171411;
+    color: #f5f1e9;
+}
+
+/* ========================================
+   PRESENTACION - COLUMNA IZQUIERDA
+======================================== */
+
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    min-width: 0;
+}
+
+.presentacion__contenido {
+    width: 100%;
+}
+
+.presentacion__titulo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #f5f1e9;
+    margin: 0 0 35px;
+}
+
+.presentacion__frase {
+    display: block;
+    color: #c99b50;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.presentacion__descripcion {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #aaa39a;
+    max-width: 490px;
+    margin-bottom: 28px;
+}
+
+/* ========================================
+   BOTONES DE PRESENTACION
+======================================== */
+
+.presentacion__acciones {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.presentacion__boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 28px;
+    min-width: 170px;
+
+    border-radius: 5px;
+    text-decoration: none;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.presentacion__boton--principal {
+    background-color: #c99b50;
+    color: #171411;
+}
+
+.presentacion__boton--principal:hover {
+    background-color: #e0b568;
+}
+
+.presentacion__boton--secundario {
+    border: 1px solid #665238;
+    color: #f5f1e9;
+    background-color: transparent;
+}
+
+.presentacion__boton--secundario:hover {
+    background-color: #c99b50;
+    color: #171411;
+}
+
+/* ========================================
+   BENEFICIOS
+======================================== */
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.beneficios__tarjeta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 12px;
+    min-width: 0;
+
+    border: 1px solid #39332a;
+    border-radius: 5px;
+    background-color: #1d1a16;
+}
+
+.beneficios__icono {
+    font-size: 23px;
+    color: #c99b50;
+}
+
+.beneficios__titulo {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #f5f1e9;
+    margin: 0 0 4px;
+}
+
+.beneficios__descripcion {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px;
+    color: #8f887e;
+    margin: 0;
+}
+
+/* ========================================
+   PRODUCTO - COLUMNA DERECHA
+======================================== */
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    width: 100%;
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/* IMAGEN DEL PRODUCTO */
+
+.producto__imagen-contenedor {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+}
+
+.producto__imagen {
+    display: block;
+    width: 100%;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 6px;
+}
+
+.producto__etiqueta {
+    position: absolute;
+    top: 17px;
+    left: 18px;
+
+    padding: 9px 14px;
+
+    background-color: #c99b50;
+    color: #171411;
+
+    border-radius: 4px;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.producto__valoracion {
+    position: absolute;
+    bottom: 17px;
+    right: 18px;
+
+    color: #e2b45f;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.producto__audio {
+    position: absolute;
+    bottom: 17px;
+    left: 18px;
+
+    padding: 10px 17px;
+
+    background-color: #171411;
+    color: #ffffff;
+
+    border: 1px solid #b18a45;
+    border-radius: 20px;
+
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* INFORMACION DEL PRODUCTO */
+
+.producto__informacion {
+    width: 100%;
+}
+
+.producto__marca {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #a9a095;
+    margin: 0 0 12px;
+}
+
+.producto__nombre {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #f5f1e9;
+    margin: 0 0 8px;
+}
+
+.producto__detalle {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    color: #898177;
+    margin: 0;
+}
+
+.producto__precio {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    color: #f5f1e9;
+    margin: 15px 0 5px;
+}
+
+.producto__stock {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 10px;
+    color: #aaa39a;
+}
+
+/* BOTONES DEL PRODUCTO */
+
+.producto__acciones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.producto__reservar {
+    flex: 1;
+    padding: 15px;
+
+    background-color: #c99b50;
+    color: #171411;
+
+    border: none;
+    border-radius: 4px;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.producto__reservar:hover {
+    background-color: #e0b568;
+}
+
+.producto__favorito {
+    width: 45px;
+    height: 45px;
+
+    background-color: transparent;
+    color: #c99b50;
+
+    border: 1px solid #665238;
+    border-radius: 4px;
+
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.producto__favorito:hover {
+    background-color: #29231a;
+}
+
+.producto__entregas {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 9px;
+    color: #898177;
+    margin-top: 15px;
+}
+
+/* ========================================
+   RESPONSIVE - TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .principal {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 40px 3%;
+    }
+
+    .presentacion__titulo {
+        font-size: 38px;
+    }
+
+    .producto__imagen {
+        height: 240px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+/* ========================================
+   RESPONSIVE - CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+
+    .principal {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        padding: 35px 20px;
+    }
+
+    .presentacion__titulo {
+        font-size: 40px;
+    }
+
+    .producto {
+        margin-top: 0;
+    }
+
+    .producto__imagen {
+        height: 260px;
+    }
+
+    .producto__nombre {
+        font-size: 21px;
+    }
+
+}

@@ -1,0 +1,192 @@
+
+/* ========================================
+   HEADER - ENCABEZADO
+======================================== */
+
+.encabezado {
+    min-height: 72px;
+    padding: 0 4.5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+
+    box-sizing: border-box;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    text-decoration: none;
+    line-height: 1;
+}
+
+.logo__nombre {
+    font-family: var(--font-heading);
+    font-size: 27px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.logo__subtitulo {
+    margin-top: 5px;
+
+    font-family: var(--font-body);
+    font-size: 7px;
+    font-weight: 500;
+    letter-spacing: 1.8px;
+
+    color: var(--color-primary);
+}
+
+/* ========================================
+   NAVEGACION
+======================================== */
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 1;
+    margin: 0 35px;
+}
+
+.navegacion__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: clamp(20px, 2.4vw, 36px);
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion__enlace {
+    text-decoration: none;
+    white-space: nowrap;
+
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.15px;
+
+    color: var(--color-text-menu);
+
+    transition: color 0.3s ease;
+}
+
+.navegacion__enlace:hover {
+    color: var(--color-primary);
+}
+
+.navegacion__enlace--activo {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* ========================================
+   ACCIONES - FAVORITOS Y CARRITO
+======================================== */
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.acciones__boton {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-bronze);
+    border-radius: 50%;
+
+    color: var(--color-primary);
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.acciones__boton:hover {
+    border-color: var(--color-primary);
+    background-color: var(--color-background);
+}
+
+/* ========================================
+   RESPONSIVE - TABLETS
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .encabezado {
+        padding: 0 3%;
+    }
+
+    .navegacion {
+        margin: 0 18px;
+    }
+
+    .navegacion__menu {
+        gap: 15px;
+    }
+
+    .navegacion__enlace {
+        font-size: 10px;
+    }
+
+}
+
+/* ========================================
+   RESPONSIVE - CELULARES
+======================================== */
+
+@media (max-width: 650px) {
+
+    .encabezado {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 12px 5%;
+        gap: 15px;
+    }
+
+    .navegacion {
+        order: 3;
+        width: 100%;
+        flex-basis: 100%;
+        margin: 0;
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .navegacion__menu {
+        justify-content: flex-start;
+        gap: 22px;
+        padding-bottom: 8px;
+    }
+
+    .navegacion__enlace {
+        font-size: 11px;
+    }
+
+}
